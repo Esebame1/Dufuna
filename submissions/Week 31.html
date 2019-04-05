@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dufuna JS</title>
+</head>
+<body>
+    <input type="text" id="textfield"/>
+    <button id="add">Add to Wishlist</button>
+    <div class="wishlist">
+        <h1>Wishlist</h1>
+        <ul id="list">
+        </ul>
+    </div>
+
+    <script>
+        const button = document.getElementById('add');
+        const list = document.getElementById('list');
+        button.addEventListener('click', e => { 
+            const input = document.getElementById('textfield').value;
+            const node = document.createElement("LI");   
+            const textnode = document.createTextNode(input);         
+            node.appendChild(textnode);            
+            list.appendChild(node);
+        });
+    </script>
+</body>
+</html>
